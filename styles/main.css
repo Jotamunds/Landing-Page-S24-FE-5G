@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: rgb(0, 132, 255);
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Poppins';
+    min-height: calc(100vh - 80px);
+}
+
+.left-side {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    color: white;
+    flex-direction: column;
+}
+
+.left-side h1, #samsung-site {
+    font-family: 'Afacad Flux';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    margin: 0px 50px 0px 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.left-side h1:hover {
+    color: var(--blue);
+    transition: 0.4s;
+}
+
+.left-side p {
+    margin: 0px 50px 30px 50px;
+    text-align: justify;
+}
+
+.left-side h2 {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.left-side div a {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 50px;
+    margin-left: 50px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.left-side div a:hover {
+    cursor: pointer;
+    background: none;
+    color: white;
+    transition: 0.4s;
+}
+
+.left-side div a:active {
+    cursor: pointer;
+    background: none;
+    color: var(--blue);
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+img {
+    background-size: cover;
+    min-width: 150px;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 955px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-side h1, #samsung-site {
+        margin: 0 10px 0 10px;
+    }
+
+    .left-side {
+        min-height: 100vh;
+        max-height: fit-content;
+        background-size: cover;
+    }
+
+    .left-side div a {
+        display: flex;
+        max-width: 30%;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .right-side {
+        display: none;
+    }
+
+    .left-side {
+        height: 100vh;
+        background-size: cover;
+    }
+    
+    .left-side p {
+        font-size: 15px;
+    }
+
+    .left-side h1, #samsung-site {
+        font-weight: 500;
+        font-size: 35px;
+        margin: 0 10px 0 10px;
+    }
+
+    .left-side div a {
+        display: flex;
+        max-width: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    img {
+        display: none;
+    }
+}
